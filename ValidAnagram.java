@@ -9,7 +9,7 @@ public class ValidAnagram {
         if (s.length() != t.length()) {
             return false;
         }
-       
+
         int count[] = new int[26];
         for (int i = 0; i < s.length(); i++) {
             count[s.charAt(i) - 'a']++;
@@ -25,6 +25,21 @@ public class ValidAnagram {
         return true;
     }
 
+    /*
+    Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
+
+    Boolean isAnagram (String s, String t)
+    {
+        if(s.length() != t.length()) return false;
+
+        int a[] = s.codePoints().sorted().toArray();
+        int b[] = t.codePoints().sorted.toArray();
+
+        return Arrays.equals(a,b);
+    
+    }
+    
+     */
     public static void main(String[] args) throws Exception {
         ValidAnagram obj = new ValidAnagram();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
